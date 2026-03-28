@@ -12,8 +12,7 @@
   "2026-04-03": [
     {
       "materia": "Técnicas de Programación",
-      "hora": "18:30 a 22:00",
-       "modo": "Feriado",
+      "modo": "Feriado",
       "detalle": "Viernes Santo",
       "tipo": "feriado"
     }
