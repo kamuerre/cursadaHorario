@@ -138,14 +138,12 @@
   "2026-05-25": [
     {
       "materia": "Base de Datos",
-      "hora": "18:00 a 20:00",
       "modo": "Feriado",
       "detalle": "25 de mayo",
       "tipo": "feriado"
     },
     {
       "materia": "Técnicas de Programación",
-      "hora": "20:00 a 22:00",
       "modo": "Feriado",
       "detalle": "25 de mayo",
       "tipo": "feriado"
@@ -188,18 +186,15 @@
   "2026-06-15": [
     {
       "materia": "Base de Datos",
-      "hora": "18:00 a 20:00",
-      "modo": "Clase asincrónica",
-      "detalle": "Clase de la materia",
-      "tipo": "base-datos"
+      "modo": "Feriado",
+      "detalle": "Feriado trasladable — Paso a la Inmortalidad del Gral. Don Martín Miguel de Güemes(17/06)",
+      "tipo": "feriado"
     },
     {
       "materia": "Técnicas de Programación",
-      "hora": "20:00 a 22:00",
-      "modo": "Clase virtual",
-      "detalle": "Clase de la materia",
-      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
-      "tipo": "tecnicas"
+      "modo": "Feriado",
+      "detalle": "Feriado trasladable — Paso a la Inmortalidad del Gral. Don Martín Miguel de Güemes(17/06)",
+      "tipo": "feriado"
     }
   ],
   "2026-06-22": [
