@@ -1,0 +1,161 @@
+{
+  "2026-03-25": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Primera clase presencial",
+      "detalle": "Presentación de la materia",
+      "tipo": "base-datos"
+    }
+  ],
+   "2026-03-30 21:00:00": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Primera clase presencial",
+      "detalle": "Presentación de la materia",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224",
+      "tipo": "base-datos"
+    }
+  ],
+  "2026-04-01": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ],
+  "2026-04-08": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ],
+  "2026-04-15": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ],
+  "2026-04-22": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ],
+  "2026-04-29": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ],
+  "2026-05-06": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ],
+  "2026-05-13": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ],
+  "2026-05-20": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ],
+  "2026-05-27": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ],
+  "2026-06-03": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ],
+  "2026-06-10": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ],
+  "2026-06-17": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ],
+  "2026-06-24": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ],
+  "2026-07-01": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:30 a 21:00",
+      "modo": "Clase virtual",
+      "detalle": "Sin detalle por ahora",
+      "tipo": "base-datos",
+      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+    }
+  ]
+}

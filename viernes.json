@@ -1,0 +1,150 @@
+{
+  "2026-03-27": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Primera clase presencial",
+      "detalle": "Introducción a la programación",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-04-03": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+       "modo": "Feriado",
+      "detalle": "Viernes Santo",
+      "tipo": "feriado"
+    }
+  ],
+  "2026-04-10": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-04-17": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-04-24": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-05-01": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Feriado",
+      "detalle": "Día del trabajador",
+      "tipo": "feriado"
+    }
+  ],
+  "2026-05-08": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-05-15": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-05-22": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-05-29": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-06-05": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-06-12": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-06-19": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-06-26": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-07-03": [
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "18:30 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ]
+}

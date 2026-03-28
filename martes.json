@@ -1,0 +1,125 @@
+{
+  "2026-03-31": [
+    {
+      "materia": "Lógica Computacional",
+      "hora": "18:30 a 21:30",
+      "modo": "Clase Presencial",
+      "detalle": "Proposiciones lógicas, operaciones lógicas, conectivos, tablas de verdad. Tautologías, contradicciones y contingencias. ",
+      "tipo": "logica"
+    }
+  ],
+  "2026-04-07": [
+    {
+      "materia": "Lógica Computacional",
+      "hora": "18:30 a 21:30",
+      "modo": "Clase virtual",
+      "detalle": "La estructura condicional. Leyes lógicas.",
+      "tipo": "logica",
+      "meet": "https://meet.google.com/syf-kwmn-nki?pli=1&authuser=2"
+    }
+  ],
+  "2026-04-14": [
+    {
+      "materia": "Lógica Computacional",
+      "hora": "18:30 a 21:30",
+      "modo": "Clase virtual",
+      "detalle": "Funciones proposicionales, cuantificadores: universal y existencial. Proposiciones cuantificadas.",
+      "tipo": "logica",
+      "meet": "https://meet.google.com/syf-kwmn-nki?pli=1&authuser=2"
+    }
+  ],
+  "2026-04-21": [
+    {
+      "materia": "Lógica Computacional",
+      "hora": "18:30 a 21:30",
+      "modo": "Clase Presencial",
+      "detalle": "Repaso y ejercitación OBLIGATORIA",
+      "tipo": "logica"
+    }
+  ],
+  "2026-04-28": [
+    {
+      "materia": "Lógica Computacional",
+      "hora": "18:30 a 21:30",
+      "modo": "1° Parcial escrito individual – Clase presencial",
+      "detalle": "Primer Parcial",
+      "tipo": "parcial"
+    }
+  ],
+  "2026-05-05": [
+    {
+      "materia": "Lógica Computacional",
+      "hora": "18:30 a 21:30",
+      "modo": "Clase virtual",
+      "detalle": "Razonamientos, validez. Métodos de prueba de validez. Reglas de inferencia",
+      "tipo": "logica",
+      "meet": "https://meet.google.com/syf-kwmn-nki?pli=1&authuser=2"
+    }
+  ],
+  "2026-05-12": [
+    {
+      "materia": "Lógica Computacional",
+      "hora": "18:30 a 21:30",
+      "modo": "Clase virtual",
+      "detalle": "Razonamientos categóricos, reglas de inferencia de particularizaciones y generalizaciones",
+      "tipo": "logica",
+      "meet": "https://meet.google.com/syf-kwmn-nki?pli=1&authuser=2"
+    }
+  ],
+  "2026-05-19": [
+    {
+      "materia": "Lógica Computacional",
+      "hora": "18:30 a 21:30",
+      "modo": "Clase Presencial",
+      "detalle": "Repaso y ejercitación Obligatoria",
+      "tipo": "logica"
+    }
+  ],
+  "2026-05-26": [
+    {
+      "materia": "Lógica Computacional",
+      "hora": "18:30 a 21:30",
+      "modo": "Clase virtual",
+      "detalle": "Algebra de Boole, definición y propiedades. El Algebra de Boole canónica. Relación con la lógica proposicional.",
+      "tipo": "logica",
+      "meet": "https://meet.google.com/syf-kwmn-nki?pli=1&authuser=2"
+    }
+  ],
+  "2026-06-02": [
+    {
+      "materia": "Lógica Computacional",
+      "hora": "18:30 a 21:30",
+      "modo": "Clase virtual",
+      "detalle": "Funciones booleanas, tablas y formas normales. Compuertas lógicas. Diseño y simplificación de circuitos combinatorios. ",
+      "tipo": "logica",
+      "meet": "https://meet.google.com/syf-kwmn-nki?pli=1&authuser=2"
+    }
+  ],
+  "2026-06-09": [
+    {
+      "materia": "Lógica Computacional",
+      "hora": "18:30 a 21:30",
+      "modo": "Clase Presencial",
+      "detalle": "Repaso y ejercitación OBLIGATORIA",
+      "tipo": "logica"
+    }
+  ],
+  "2026-06-16": [
+    {
+      "materia": "Lógica Computacional",
+      "hora": "18:30 a 21:30",
+      "modo": "Clase Presencial",
+      "detalle": "Segundo Parcial",
+      "tipo": "logica"
+    }
+  ],
+  "2026-06-23": [
+    {
+      "materia": "Lógica Computacional",
+      "hora": "18:30 a 21:30",
+      "modo": "Clase Presencial",
+      "detalle": "Recuperatorio",
+      "tipo": "logica"
+    }
+  ]
+}

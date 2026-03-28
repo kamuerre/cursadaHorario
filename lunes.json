@@ -1,0 +1,239 @@
+{
+  "2026-03-30": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+      "modo": "Clase asincrónica",
+      "detalle": "Clase de la materia",
+      "tipo": "base-datos"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-04-06": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+      "modo": "Clase asincrónica",
+      "detalle": "Clase de la materia",
+      "tipo": "base-datos"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-04-13": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+      "modo": "Clase asincrónica",
+      "detalle": "Clase de la materia",
+      "tipo": "base-datos"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-04-20": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+      "modo": "Clase asincrónica",
+      "detalle": "Clase de la materia",
+      "tipo": "base-datos"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-04-27": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+      "modo": "Clase asincrónica",
+      "detalle": "Clase de la materia",
+      "tipo": "base-datos"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-05-04": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+      "modo": "Clase asincrónica",
+      "detalle": "Clase de la materia",
+      "tipo": "base-datos"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-05-11": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+      "modo": "Clase asincrónica",
+      "detalle": "Clase de la materia",
+      "tipo": "base-datos"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-05-18": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+      "modo": "Clase asincrónica",
+      "detalle": "Clase de la materia",
+      "tipo": "base-datos"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-05-25": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+      "modo": "Feriado",
+      "detalle": "25 de mayo",
+      "tipo": "feriado"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Feriado",
+      "detalle": "25 de mayo",
+      "tipo": "feriado"
+    }
+  ],
+  "2026-06-01": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+     "modo": "Clase asincrónica",
+      "detalle": "Clase de la materia",
+      "tipo": "base-datos"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-06-08": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+      "modo": "Clase asincrónica",
+      "detalle": "Clase de la materia",
+      "tipo": "base-datos"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-06-15": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+      "modo": "Clase asincrónica",
+      "detalle": "Clase de la materia",
+      "tipo": "base-datos"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-06-22": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+      "modo": "Clase asincrónica",
+      "detalle": "Clase de la materia",
+      "tipo": "base-datos"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ],
+  "2026-06-29": [
+    {
+      "materia": "Base de Datos",
+      "hora": "18:00 a 20:00",
+      "modo": "Clase asincrónica",
+      "detalle": "Clase de la materia",
+      "tipo": "base-datos"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "hora": "20:00 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Clase de la materia",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
+    }
+  ]
+}
