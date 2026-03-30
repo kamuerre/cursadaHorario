@@ -25,7 +25,7 @@
       "materia": "Técnicas de Programación",
       "hora": "20:00 a 22:00",
       "modo": "Clase virtual",
-      "detalle": "Clase de la materia",
+      "detalle": "Comenzamos con la función print()",
       "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
       "tipo": "tecnicas"
     }
@@ -42,7 +42,7 @@
       "materia": "Técnicas de Programación",
       "hora": "20:00 a 22:00",
       "modo": "Clase virtual",
-      "detalle": "Clase de la materia",
+      "detalle": "Operadores y variables",
       "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
       "tipo": "tecnicas"
     }
@@ -59,7 +59,7 @@
       "materia": "Técnicas de Programación",
       "hora": "20:00 a 22:00",
       "modo": "Clase virtual",
-      "detalle": "Clase de la materia",
+      "detalle": "Decisiones en Python",
       "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
       "tipo": "tecnicas"
     }
@@ -76,7 +76,7 @@
       "materia": "Técnicas de Programación",
       "hora": "20:00 a 22:00",
       "modo": "Clase virtual",
-      "detalle": "Clase de la materia",
+      "detalle": "Listas",
       "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
       "tipo": "tecnicas"
     }
@@ -93,7 +93,7 @@
       "materia": "Técnicas de Programación",
       "hora": "20:00 a 22:00",
       "modo": "Clase virtual",
-      "detalle": "Clase de la materia",
+      "detalle": "Tuplas",
       "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
       "tipo": "tecnicas"
     }
