@@ -1,4 +1,18 @@
 {
+    "2026-03-23": [
+    {
+      "materia": "Base de Datos",
+      "modo": "Feriado",
+      "detalle": "Feriado puente — Día de la memoria(24/03)",
+      "tipo": "feriado"
+    },
+    {
+      "materia": "Técnicas de Programación",
+      "modo": "Feriado",
+      "detalle": "Día de la memoria(24/03)",
+      "tipo": "feriado"
+    }
+  ],
   "2026-03-30": [
     {
       "materia": "Base de Datos",
