@@ -409,3 +409,60 @@ table tr th:nth-child(8) {
     width: 48px;
   }
 }
+
+/* ===== CARD DE INFORMACIÓN ===== */
+
+.info-card {
+  max-width: 750px;
+  margin: 16px auto 20px;
+  padding: 16px 18px;
+  border-radius: 12px;
+
+  background: #f4f6fb;
+  border: 1px solid #e3e6f0;
+
+  box-shadow: 0 6px 18px rgba(84, 88, 112, 0.08);
+  text-align: center;
+}
+
+.info-card p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #4b4b63;
+  line-height: 1.5;
+}
+
+/* jerarquía visual sutil */
+.info-card p:first-child {
+  font-weight: 600;
+}
+
+.info-card p:nth-child(2) {
+  color: #a94442; /* aviso */
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  margin-top: 30px;
+  padding: 18px 12px;
+
+  text-align: center;
+  font-size: 14px;
+
+  color: #5f5f75;
+  background: #f9f9fd;
+
+  border-top: 1px solid #e3e6f0;
+}
+
+/* mail link */
+footer a {
+  color: #45658D;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
