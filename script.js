@@ -22,6 +22,23 @@
       const dia = String(fecha.getDate()).padStart(2, '0');
       return `${anio}-${mes}-${dia}`;
     }
+function obtenerEstadoFecha(fecha) {
+  const hoy = new Date();
+  hoy.setHours(0, 0, 0, 0);
+
+  const fechaComparar = new Date(fecha);
+  fechaComparar.setHours(0, 0, 0, 0);
+
+  if (fechaComparar.getTime() === hoy.getTime()) {
+    return 'hoy';
+  }
+
+  if (fechaComparar < hoy) {
+    return 'pasado';
+  }
+
+  return '';
+}
 
     function crearEventoHTML(evento) {
       let claseModo = '';
@@ -92,7 +109,12 @@
         for (let i = 0; i < 7; i++) {
           const fecha = sumarDias(lunesActual, i);
           const td = document.createElement('td');
-          td.textContent = fecha.getDate();
+         const estadoFecha = obtenerEstadoFecha(fecha);
+td.textContent = fecha.getDate();
+
+if (estadoFecha) {
+  td.classList.add(estadoFecha);
+}
           filaFechas.appendChild(td);
 
           if (fecha.getDate() <= 7 && i >= 3) {
@@ -110,6 +132,11 @@
           const fecha = sumarDias(lunesActual, i);
           const iso = formatearFechaISO(fecha);
           const td = document.createElement('td');
+            const estadoFecha = obtenerEstadoFecha(fecha);
+
+if (estadoFecha) {
+  td.classList.add(estadoFecha);
+}
           const celda = document.createElement('div');
           celda.className = 'celda';
 
