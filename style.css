@@ -81,11 +81,12 @@ body.tema-oscuro {
 
 body {
   margin: 0;
-  padding: 10px;
+  padding: 0;
   font-family: var(--fuente-principal);
   background: var(--color-fondo);
   color: var(--color-texto);
   transition: background 0.25s ease, color 0.25s ease;
+  overflow-x:hidden;
 }
 
 .contenedor {
