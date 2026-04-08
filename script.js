@@ -1,27 +1,27 @@
+const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sab', 'Dom'];
 
-    const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sab', 'Dom'];
-  
-    function mergeEventos(...fuentes) {
-    const resultado = {};
+function mergeEventos(...fuentes) {
+  const resultado = {};
 
-    fuentes.forEach(fuente => {
-        Object.keys(fuente).forEach(fecha => {
-        if (!resultado[fecha]) {
-            resultado[fecha] = [];
-        }
-        resultado[fecha].push(...fuente[fecha]);
-        });
+  fuentes.forEach(fuente => {
+    Object.keys(fuente).forEach(fecha => {
+      if (!resultado[fecha]) {
+        resultado[fecha] = [];
+      }
+      resultado[fecha].push(...fuente[fecha]);
     });
+  });
 
-    return resultado;
-    }
+  return resultado;
+}
 
-    function formatearFechaISO(fecha) {
-      const anio = fecha.getFullYear();
-      const mes = String(fecha.getMonth() + 1).padStart(2, '0');
-      const dia = String(fecha.getDate()).padStart(2, '0');
-      return `${anio}-${mes}-${dia}`;
-    }
+function formatearFechaISO(fecha) {
+  const anio = fecha.getFullYear();
+  const mes = String(fecha.getMonth() + 1).padStart(2, '0');
+  const dia = String(fecha.getDate()).padStart(2, '0');
+  return `${anio}-${mes}-${dia}`;
+}
+
 function obtenerEstadoFecha(fecha) {
   const hoy = new Date();
   hoy.setHours(0, 0, 0, 0);
@@ -40,124 +40,222 @@ function obtenerEstadoFecha(fecha) {
   return '';
 }
 
-    function crearEventoHTML(evento) {
-      let claseModo = '';
-      const modoMinuscula = (evento.modo || '').toLowerCase();
-      if (modoMinuscula.includes('asincrónica')) claseModo = 'asincronica';
-      if (modoMinuscula.includes('presencial')) claseModo = 'presencial';
-      if (modoMinuscula.includes('virtual')) claseModo = 'virtual';
-      if (modoMinuscula.includes('feriado') || modoMinuscula.includes('parcial')) claseModo = 'especial';
+function obtenerEstadoSemana(lunesSemana) {
+  const hoy = new Date();
+  hoy.setHours(0, 0, 0, 0);
 
-      return `
-        <div class="evento ${evento.tipo}">
-          <h3>${evento.materia}</h3>
-          ${evento.hora ? `<div class="hora">${evento.hora}</div>` : ''}
-          ${evento.modo ? `<div class="modo ${claseModo}">${evento.modo}</div>` : ''}
-          ${evento.detalle ? `<div class="detalle">${evento.detalle}</div>` : ''}
-          ${evento.meet ? `<a class="link" href="${evento.meet}" target="_blank">Entrar al Meet</a>` : ''}
-        </div>
-      `;
-    }
+  const inicioSemana = new Date(lunesSemana);
+  inicioSemana.setHours(0, 0, 0, 0);
 
-    function obtenerLunesDeSemana(fecha) {
-      const copia = new Date(fecha);
-      const dia = copia.getDay();
-      const diferencia = dia === 0 ? -6 : 1 - dia;
-      copia.setDate(copia.getDate() + diferencia);
-      copia.setHours(0, 0, 0, 0);
-      return copia;
-    }
+  const finSemana = sumarDias(inicioSemana, 6);
+  finSemana.setHours(0, 0, 0, 0);
 
-    function sumarDias(fecha, dias) {
-      const nueva = new Date(fecha);
-      nueva.setDate(nueva.getDate() + dias);
-      return nueva;
-    }
+  if (hoy >= inicioSemana && hoy <= finSemana) {
+    return 'actual';
+  }
 
-    function generarTabla() {
-      const tabla = document.getElementById('tablaHorario');
+  if (finSemana < hoy) {
+    return 'pasada';
+  }
 
-      const inicio = new Date('2026-03-23T00:00:00');
-      const fin = new Date('2026-07-05T00:00:00');
-
-      let lunesActual = obtenerLunesDeSemana(inicio);
-      let numeroSemana = 1;
-
-      while (lunesActual <= fin) {
-        // fila días
-        const filaDias = document.createElement('tr');
-        filaDias.className = 'fila-dias';
-
-        const celdaSemanaDias = document.createElement('td');
-        celdaSemanaDias.className = 'semana';
-        celdaSemanaDias.rowSpan = 3;
-        celdaSemanaDias.textContent = `Semana ${numeroSemana}`;
-        filaDias.appendChild(celdaSemanaDias);
-
-        for (let i = 0; i < 7; i++) {
-          const td = document.createElement('td');
-          td.textContent = diasSemana[i];
-          filaDias.appendChild(td);
-        }
-        tabla.appendChild(filaDias);
-
-        // fila fechas
-        const filaFechas = document.createElement('tr');
-        filaFechas.className = 'fila-fechas';
-
-        let tieneCambioMes = false;
-        for (let i = 0; i < 7; i++) {
-          const fecha = sumarDias(lunesActual, i);
-          const td = document.createElement('td');
-         const estadoFecha = obtenerEstadoFecha(fecha);
-td.textContent = fecha.getDate();
-
-if (estadoFecha) {
-  td.classList.add(estadoFecha);
+  return 'futura';
 }
-          filaFechas.appendChild(td);
 
-          if (fecha.getDate() <= 7 && i >= 3) {
-            tieneCambioMes = true;
-          }
-        }
-        if (tieneCambioMes) filaFechas.classList.add('mes-nuevo');
-        tabla.appendChild(filaFechas);
+function crearEventoHTML(evento) {
+  let claseModo = '';
+  const modoMinuscula = (evento.modo || '').toLowerCase();
 
-        // fila contenido
-        const filaContenido = document.createElement('tr');
-        filaContenido.className = 'fila-contenido';
+  if (modoMinuscula.includes('asincrónica')) claseModo = 'asincronica';
+  if (modoMinuscula.includes('presencial')) claseModo = 'presencial';
+  if (modoMinuscula.includes('virtual')) claseModo = 'virtual';
+  if (modoMinuscula.includes('feriado') || modoMinuscula.includes('parcial')) claseModo = 'especial';
 
-        for (let i = 0; i < 7; i++) {
-          const fecha = sumarDias(lunesActual, i);
-          const iso = formatearFechaISO(fecha);
-          const td = document.createElement('td');
-            const estadoFecha = obtenerEstadoFecha(fecha);
-
-if (estadoFecha) {
-  td.classList.add(estadoFecha);
+  return `
+    <div class='evento ${evento.tipo || ''}'>
+      <h3>${evento.materia}</h3>
+      ${evento.hora ? `<div class='hora'>${evento.hora}</div>` : ''}
+      ${evento.modo ? `<div class='modo ${claseModo}'>${evento.modo}</div>` : ''}
+      ${evento.detalle ? `<div class='detalle'>${evento.detalle}</div>` : ''}
+      ${evento.meet ? `<a class='link' href='${evento.meet}' target='_blank' rel='noopener noreferrer'>Entrar al Meet</a>` : ''}
+    </div>
+  `;
 }
-          const celda = document.createElement('div');
-          celda.className = 'celda';
 
-          const eventos = eventosPorFecha[iso] || [];
-          if (eventos.length > 0) {
-            celda.innerHTML = eventos.map(crearEventoHTML).join('');
-          } else {
-            celda.innerHTML = '';
-            td.classList.add('vacio');
-          }
+function obtenerLunesDeSemana(fecha) {
+  const copia = new Date(fecha);
+  const dia = copia.getDay();
+  const diferencia = dia === 0 ? -6 : 1 - dia;
 
-          td.appendChild(celda);
-          filaContenido.appendChild(td);
-        }
+  copia.setDate(copia.getDate() + diferencia);
+  copia.setHours(0, 0, 0, 0);
 
-        tabla.appendChild(filaContenido);
+  return copia;
+}
 
-        lunesActual = sumarDias(lunesActual, 7);
-        numeroSemana++;
-      }
+function sumarDias(fecha, dias) {
+  const nueva = new Date(fecha);
+  nueva.setDate(nueva.getDate() + dias);
+  return nueva;
+}
+
+function crearFilaSemana(lunesActual, numeroSemana) {
+  const filas = [];
+
+  // FILA DE DÍAS
+  const filaDias = document.createElement('tr');
+  filaDias.className = 'fila-dias';
+
+  const celdaSemanaDias = document.createElement('td');
+  celdaSemanaDias.className = 'semana';
+  celdaSemanaDias.rowSpan = 3;
+  celdaSemanaDias.textContent = `Semana ${numeroSemana}`;
+  filaDias.appendChild(celdaSemanaDias);
+
+  for (let i = 0; i < 7; i++) {
+    const td = document.createElement('td');
+    td.textContent = diasSemana[i];
+    filaDias.appendChild(td);
+  }
+
+  filas.push(filaDias);
+
+  // FILA DE FECHAS
+  const filaFechas = document.createElement('tr');
+  filaFechas.className = 'fila-fechas';
+
+  let tieneCambioMes = false;
+
+  for (let i = 0; i < 7; i++) {
+    const fecha = sumarDias(lunesActual, i);
+    const td = document.createElement('td');
+    const estadoFecha = obtenerEstadoFecha(fecha);
+
+    td.textContent = fecha.getDate();
+
+    if (estadoFecha) {
+      td.classList.add(estadoFecha);
     }
+
+    filaFechas.appendChild(td);
+
+    if (fecha.getDate() <= 7 && i >= 3) {
+      tieneCambioMes = true;
+    }
+  }
+
+  if (tieneCambioMes) {
+    filaFechas.classList.add('mes-nuevo');
+  }
+
+  filas.push(filaFechas);
+
+  // FILA DE CONTENIDO
+  const filaContenido = document.createElement('tr');
+  filaContenido.className = 'fila-contenido';
+
+  for (let i = 0; i < 7; i++) {
+    const fecha = sumarDias(lunesActual, i);
+    const iso = formatearFechaISO(fecha);
+    const td = document.createElement('td');
+    const estadoFecha = obtenerEstadoFecha(fecha);
+
+    if (estadoFecha) {
+      td.classList.add(estadoFecha);
+    }
+
+    const celda = document.createElement('div');
+    celda.className = 'celda';
+
+    const eventos = eventosPorFecha[iso] || [];
+
+    if (eventos.length > 0) {
+      celda.innerHTML = eventos.map(crearEventoHTML).join('');
+    } else {
+      celda.innerHTML = '';
+      td.classList.add('vacio');
+    }
+
+    td.appendChild(celda);
+    filaContenido.appendChild(td);
+  }
+
+  filas.push(filaContenido);
+
+  return filas;
+}
+
+function generarTabla() {
+  const tabla = document.getElementById('tablaHorario');
+  tabla.innerHTML = '';
+
+  const inicio = new Date('2026-03-23T00:00:00');
+  const fin = new Date('2026-07-05T00:00:00');
+
+  let lunesActual = obtenerLunesDeSemana(inicio);
+  let numeroSemana = 1;
+
+  const semanasPasadas = [];
+  const semanasActualesOFuturas = [];
+
+  while (lunesActual <= fin) {
+    const estadoSemana = obtenerEstadoSemana(lunesActual);
+    const filasSemana = crearFilaSemana(lunesActual, numeroSemana);
+
+    filasSemana.forEach(fila => {
+      fila.dataset.estadoSemana = estadoSemana;
+      fila.dataset.numeroSemana = numeroSemana;
+    });
+
+    if (estadoSemana === 'pasada') {
+      semanasPasadas.push(...filasSemana);
+    } else {
+      semanasActualesOFuturas.push(...filasSemana);
+    }
+
+    lunesActual = sumarDias(lunesActual, 7);
+    numeroSemana++;
+  }
+
+  // primero semana actual + futuras
+  semanasActualesOFuturas.forEach(fila => {
+    tabla.appendChild(fila);
+  });
+
+  // después semanas pasadas ocultas
+  semanasPasadas.forEach(fila => {
+    fila.classList.add('semana-pasada-oculta');
+    tabla.appendChild(fila);
+  });
+
+  configurarBotonPasadas();
+}
+
+function configurarBotonPasadas() {
+  const boton = document.getElementById('togglePasadas');
+  if (!boton) return;
+
+  const filasPasadas = document.querySelectorAll('[data-estado-semana="pasada"]');
+  let visibles = false;
+
+  if (filasPasadas.length === 0) {
+    boton.style.display = 'none';
+    return;
+  }
+
+  boton.textContent = 'Ver semanas pasadas';
+
+  boton.onclick = function () {
+    visibles = !visibles;
+
+    filasPasadas.forEach(fila => {
+      fila.classList.toggle('semana-pasada-oculta', !visibles);
+    });
+
+    boton.textContent = visibles
+      ? 'Ocultar semanas pasadas'
+      : 'Ver semanas pasadas';
+  };
+}
 
 let eventosPorFecha = {};
 
@@ -170,16 +268,8 @@ async function cargarEventos() {
     fetch('viernes.json').then(res => res.json())
   ]);
 
-  // combinar todos los objetos
-  eventosPorFecha = {
-    ...martes,
-    ...jueves,
-    ...miercoles,
-    ...lunes,
-    ...viernes
-  };
-
-  generarTabla(); 
+  eventosPorFecha = mergeEventos(martes, jueves, miercoles, lunes, viernes);
+  generarTabla();
 }
 
 cargarEventos();
