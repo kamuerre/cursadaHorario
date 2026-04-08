@@ -204,7 +204,7 @@ footer a:hover {
 /* SOLO en celular/tablet hace scroll */
 .tabla-responsive {
   width: 100%;
-  overflow-x: visible;
+  overflow-x: hidden;
 }
 
 table {
@@ -222,12 +222,19 @@ th {
 }
 
 .semana {
-  width: 8%;
+  width: 110px;
+  min-width: 110px;
+  max-width: 110px;
   background: var(--color-semana);
   font-weight: 700;
   font-size: 16px;
   vertical-align: middle;
   color: var(--color-titulo);
+}
+.fila-dias td,
+.fila-fechas td,
+.fila-contenido td {
+  width: calc((100% - 110px) / 7);
 }
 
 .fila-dias td {
@@ -254,17 +261,18 @@ th {
 }
 
 .fila-contenido td {
-  height: 118px;
+  min-height: 118px;
+  height: auto;
   background: var(--color-superficie);
   padding: 6px;
 }
 
 .celda {
-  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 6px;
   align-items: stretch;
+  justify-content: flex-start;
 }
 
 .evento {
@@ -419,7 +427,6 @@ footer {
     font-size: 13px;
   }
 
-  /* desde tablet para abajo, sí puede scrollear */
   .tabla-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -427,12 +434,20 @@ footer {
 
   table {
     min-width: 980px;
+    width: 980px;
   }
 
   .semana {
     width: 85px;
     min-width: 85px;
+    max-width: 85px;
     font-size: 15px;
+  }
+
+  .fila-dias td,
+  .fila-fechas td,
+  .fila-contenido td {
+    width: 128px;
   }
 
   .fila-dias td {
@@ -446,7 +461,8 @@ footer {
   }
 
   .fila-contenido td {
-    height: 112px;
+    min-height: 112px;
+    height: auto;
     padding: 5px;
   }
 
@@ -465,7 +481,6 @@ footer {
     font-size: 10px;
   }
 }
-
 /* Celular */
 @media (max-width: 768px) {
   body {
@@ -503,15 +518,28 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .tabla-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   table {
+    width: 860px;
     min-width: 860px;
   }
 
   .semana {
     width: 70px;
     min-width: 70px;
+    max-width: 70px;
     font-size: 12px;
     padding: 4px;
+  }
+
+  .fila-dias td,
+  .fila-fechas td,
+  .fila-contenido td {
+    width: 113px;
   }
 
   .fila-dias td {
@@ -526,7 +554,8 @@ footer {
   }
 
   .fila-contenido td {
-    height: 108px;
+    min-height: 108px;
+    height: auto;
     padding: 4px;
   }
 
@@ -556,7 +585,6 @@ footer {
     margin-top: 4px;
   }
 }
-
 /* Celular chico */
 @media (max-width: 480px) {
   body {
@@ -575,14 +603,26 @@ footer {
     font-size: 11px;
   }
 
+  .tabla-responsive {
+    overflow-x: auto;
+  }
+
   table {
+    width: 780px;
     min-width: 780px;
   }
 
   .semana {
     width: 60px;
     min-width: 60px;
+    max-width: 60px;
     font-size: 11px;
+  }
+
+  .fila-dias td,
+  .fila-fechas td,
+  .fila-contenido td {
+    width: 103px;
   }
 
   .fila-dias td {
@@ -596,7 +636,8 @@ footer {
   }
 
   .fila-contenido td {
-    height: 100px;
+    min-height: 100px;
+    height: auto;
     padding: 3px;
   }
 
@@ -614,4 +655,5 @@ footer {
   .evento .link {
     font-size: 8px;
   }
+}
 }
