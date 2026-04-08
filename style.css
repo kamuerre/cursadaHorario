@@ -521,3 +521,28 @@ footer a:hover {
   background: #eeeeee;
   opacity: 0.7;
 }
+/* estilo base */
+.semana {
+  font-weight: 700;
+  background: #eef1fb;
+  color: #4b4b63;
+}
+
+/* semanas pasadas */
+tr[data-estado-semana="pasada"] .semana {
+  background: #f1f1f5;
+  color: #9aa0b5;
+  border-color: #e0e3eb;
+}
+
+/* semana actual  */
+tr[data-estado-semana="actual"] .semana {
+  background: #dfe7ff;
+  color: #2f3a8f;
+}
+
+/* semanas futuras  */
+tr[data-estado-semana="futura"] .semana {
+  background: #eef1fb;
+  color: #4b4b63;
+}
