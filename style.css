@@ -540,6 +540,20 @@ tr[data-estado-semana="actual"] .semana {
   background: #dfe7ff;
   color: #2f3a8f;
 }
+.info-card ul {
+  padding-left: 18px;
+  margin: 6px 0 12px;
+}
+
+.info-card li {
+  margin-bottom: 4px;
+}
+
+.info-card .aviso {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #7a7a8c;
+}
 
 /* semanas futuras  */
 tr[data-estado-semana="futura"] .semana {
