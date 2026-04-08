@@ -10,7 +10,6 @@ function mergeEventos(...fuentes) {
       if (!resultado[fecha]) {
         resultado[fecha] = [];
       }
-
       resultado[fecha].push(...fuente[fecha]);
     });
   });
@@ -22,7 +21,6 @@ function formatearFechaISO(fecha) {
   const anio = fecha.getFullYear();
   const mes = String(fecha.getMonth() + 1).padStart(2, '0');
   const dia = String(fecha.getDate()).padStart(2, '0');
-
   return `${anio}-${mes}-${dia}`;
 }
 
@@ -122,12 +120,12 @@ function crearEventoHTML(evento) {
   const claseModo = obtenerClaseModo(evento);
 
   return `
-    <article class='evento ${claseMateria}'>
+    <article class="evento ${claseMateria}">
       <h3>${escaparHtml(evento.materia || '')}</h3>
-      ${evento.hora ? `<div class='hora'>${escaparHtml(evento.hora)}</div>` : ''}
-      ${evento.modo ? `<div class='modo ${claseModo}'>${escaparHtml(evento.modo)}</div>` : ''}
-      ${evento.detalle ? `<div class='detalle'>${escaparHtml(evento.detalle)}</div>` : ''}
-      ${evento.meet ? `<a class='link' href='${evento.meet}' target='_blank' rel='noopener noreferrer'>Entrar al Meet</a>` : ''}
+      ${evento.hora ? `<div class="hora">${escaparHtml(evento.hora)}</div>` : ''}
+      ${evento.modo ? `<div class="modo ${claseModo}">${escaparHtml(evento.modo)}</div>` : ''}
+      ${evento.detalle ? `<div class="detalle">${escaparHtml(evento.detalle)}</div>` : ''}
+      ${evento.meet ? `<a class="link" href="${evento.meet}" target="_blank" rel="noopener noreferrer">Entrar al Meet</a>` : ''}
     </article>
   `;
 }
@@ -168,11 +166,11 @@ function crearFilaSemana(lunesActual, numeroSemana) {
       td.classList.add(estadoFecha);
     }
 
-    filaFechas.appendChild(td);
-
     if (fecha.getDate() <= 7 && i >= 3) {
       tieneCambioMes = true;
     }
+
+    filaFechas.appendChild(td);
   }
 
   if (tieneCambioMes) {
@@ -301,7 +299,7 @@ async function cargarEventos() {
     const tabla = document.getElementById('tablaHorario');
     tabla.innerHTML = `
       <tr>
-        <td style='padding: 16px; text-align: left;'>
+        <td style="padding: 16px; text-align: left;">
           No se pudieron cargar los archivos JSON.
         </td>
       </tr>
