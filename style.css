@@ -486,6 +486,35 @@ footer a:hover {
   background: #eeeeee;
   color: #8a8a8a;
 }
+.acciones-semanas {
+  display: flex;
+  justify-content: center;
+  margin: 14px 0 18px;
+}
+
+#togglePasadas {
+  border: 1px solid #d8dbe6;
+  background: #ffffff;
+  color: #4b4b63;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#togglePasadas:hover {
+  background: #f4f6fb;
+}
+
+#togglePasadas:active {
+  transform: scale(0.98);
+}
+
+.semana-pasada-oculta {
+  display: none;
+}
 
 /* contenido pasado */
 .fila-contenido td.pasado {
