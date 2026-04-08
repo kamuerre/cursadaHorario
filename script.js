@@ -97,10 +97,7 @@ function obtenerClaseMateria(evento) {
   const tipo = (evento.tipo || '').toLowerCase();
   const materia = (evento.materia || '').toLowerCase();
 
-  if (tipo) {
-    return tipo;
-  }
-
+  if (tipo) return tipo;
   if (materia.includes('lógica')) return 'logica';
   if (materia.includes('base de datos')) return 'base-datos';
   if (materia.includes('análisis')) return 'analisis';
