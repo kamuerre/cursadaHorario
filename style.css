@@ -1,152 +1,273 @@
+:root {
+  --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --color-fondo: #f4f6fb;
+  --color-superficie: #ffffff;
+  --color-superficie-secundaria: #f8faff;
+  --color-borde: #dbe2f0;
+  --color-texto: #243046;
+  --color-texto-secundario: #5f6c85;
+  --color-titulo: #1f2a44;
+  --color-sombra: 0 10px 30px rgba(31, 42, 68, 0.10);
+
+  --color-acento: #45658d;
+  --color-acento-hover: #314d72;
+
+  --color-semana: #e9eef8;
+  --color-dia: #edf3ff;
+  --color-fecha: #f8fbff;
+  --color-mes-nuevo: #fce8ea;
+
+  --color-info-bg: #f5f8ff;
+  --color-info-borde: #d8e3f5;
+
+  --color-hoy: #fff2a8;
+  --color-hoy-borde: #d6b800;
+  --color-hoy-contenido: #fff9d6;
+
+  --color-pasado: #eceff4;
+  --color-pasado-texto: #8a93a5;
+}
+
+body.tema-oscuro {
+  --color-fondo: #0f1726;
+  --color-superficie: #172033;
+  --color-superficie-secundaria: #1d2940;
+  --color-borde: #2b3a57;
+  --color-texto: #e7edf8;
+  --color-texto-secundario: #aab6cf;
+  --color-titulo: #ffffff;
+  --color-sombra: 0 14px 36px rgba(0, 0, 0, 0.35);
+
+  --color-acento: #8eb8ff;
+  --color-acento-hover: #b4d1ff;
+
+  --color-semana: #22314d;
+  --color-dia: #20304d;
+  --color-fecha: #1b2740;
+  --color-mes-nuevo: #49303b;
+
+  --color-info-bg: #1a2740;
+  --color-info-borde: #304261;
+
+  --color-hoy: #5d4d00;
+  --color-hoy-borde: #f1cd2e;
+  --color-hoy-contenido: #4b3f00;
+
+  --color-pasado: #1b2333;
+  --color-pasado-texto: #7f8aa3;
+}
+
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  padding: 10px;
-  font-family: Arial, sans-serif;
-  background: #f7f7fb;
-  color: #2f2f35;
+  padding: 16px;
+  font-family: var(--fuente-principal);
+  background: linear-gradient(180deg, var(--color-fondo) 0%, var(--color-superficie-secundaria) 100%);
+  color: var(--color-texto);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .contenedor {
   max-width: 1500px;
   margin: 0 auto;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(84, 88, 112, 0.10);
-  padding: 20px;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 22px;
+  box-shadow: var(--color-sombra);
+  padding: 24px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.encabezado {
+  flex: 1;
+  min-width: 260px;
 }
 
 h1 {
-  margin: 0 0 10px;
-  text-align: center;
-  font-size: 28px;
-  color: #4b4b63;
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 1.15;
+  color: var(--color-titulo);
 }
 
 .subtitulo {
-  text-align: center;
-  margin-bottom: 18px;
-  color: #7a7a8c;
+  margin: 0;
+  color: var(--color-texto-secundario);
+  font-size: 15px;
+}
+
+.boton-tema {
+  border: 1px solid var(--color-borde);
+  background: var(--color-superficie-secundaria);
+  color: var(--color-texto);
+  border-radius: 12px;
+  padding: 10px 14px;
   font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.boton-tema:hover {
+  background: var(--color-acento);
+  color: #fff;
+  border-color: var(--color-acento);
+}
+
+.info-card {
+  max-width: 860px;
+  margin: 0 auto 22px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: var(--color-info-bg);
+  border: 1px solid var(--color-info-borde);
+  box-shadow: 0 8px 24px rgba(20, 30, 50, 0.08);
+  text-align: left;
+}
+
+.info-card p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-texto);
+}
+
+.info-card a,
+footer a,
+.evento .link {
+  color: var(--color-acento);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.info-card a:hover,
+footer a:hover,
+.evento .link:hover {
+  color: var(--color-acento-hover);
+  text-decoration: underline;
 }
 
 table {
   width: 100%;
   min-width: 1100px;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   table-layout: fixed;
+  overflow: hidden;
+  border-radius: 18px;
 }
 
 td,
 th {
-  border: 1px solid #d8dbe6;
+  border: 1px solid var(--color-borde);
   vertical-align: top;
   text-align: center;
   padding: 0;
+  background: var(--color-superficie);
 }
 
 .semana {
   width: 100px;
-  background: #eceaf6;
-  font-weight: bold;
+  background: var(--color-semana);
+  font-weight: 700;
   font-size: 18px;
   vertical-align: middle;
-  color: #57556b;
+  color: var(--color-titulo);
 }
 
 .fila-dias td {
-  background: #f8eecf;
-  font-weight: bold;
-  height: 34px;
+  background: var(--color-dia);
+  font-weight: 700;
+  height: 38px;
   vertical-align: middle;
   font-size: 14px;
-  color: #6b6248;
+  color: var(--color-titulo);
 }
 
 .fila-fechas td {
-  background: #f6e4c8;
-  height: 28px;
+  background: var(--color-fecha);
+  height: 30px;
   vertical-align: middle;
   font-size: 13px;
-  color: #7a694f;
+  color: var(--color-texto-secundario);
+  font-weight: 600;
 }
 
 .fila-fechas.mes-nuevo td {
-  background: #f5d6d8;
-  color: #815e65;
+  background: var(--color-mes-nuevo);
 }
 
 .fila-contenido td {
-  height: 130px;
-  background: #ffffff;
-  padding: 6px;
+  height: 136px;
+  background: var(--color-superficie);
+  padding: 8px;
 }
 
 .celda {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   align-items: stretch;
 }
 
 .evento {
-  border-radius: 10px;
-  padding: 8px;
+  border-radius: 14px;
+  padding: 10px;
   text-align: left;
   border: 1px solid rgba(90, 90, 110, 0.10);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.evento:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10);
 }
 
 .evento h3 {
-  margin: 0 0 4px;
+  margin: 0 0 6px;
   font-size: 13px;
-  line-height: 1.2;
-  color: #3e3e50;
+  line-height: 1.3;
+  color: #243046;
+}
+
+body.tema-oscuro .evento h3 {
+  color: #122033;
 }
 
 .evento .hora,
 .evento .modo,
 .evento .detalle {
   font-size: 11px;
-  line-height: 1.3;
-  margin-top: 2px;
-}
-
-.evento .link {
-  display: inline-block;
-  margin-top: 5px;
-  font-size: 11px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #6c63a8;
-}
-
-.evento .link:hover {
-  text-decoration: underline;
+  line-height: 1.4;
+  margin-top: 3px;
 }
 
 /* Materias */
-.logica {
-  background: #ffe8d9;
-}
-
-.base-datos {
-  background: #e3f1df;
-}
-
-.analisis {
-  background: #e3edfb;
-}
-
-.tecnicas {
-  background: #f6def3;
-}
+.logica { background: #ffe8d9; }
+.base-datos { background: #e3f1df; }
+.analisis { background: #e3edfb; }
+.tecnicas { background: #f6def3; }
 
 /* Estados */
 .feriado {
@@ -170,431 +291,136 @@ th {
 
 /* Modos */
 .presencial {
-  color: #5d8a55;
+  color: #3f7d39;
   font-weight: bold;
 }
 
 .asincronica {
-  color: #b38a3f;
+  color: #9c761f;
   font-weight: bold;
 }
 
 .virtual {
-  color: #b26b47;
+  color: #a05731;
   font-weight: bold;
 }
 
 .especial {
-  color: #b45b68;
+  color: #af4654;
   font-weight: bold;
 }
 
 .vacio {
-  background: #ffffff;
+  background: var(--color-superficie);
 }
 
-/* Sábado */
+/* Fechas dinámicas */
+.fila-fechas td.hoy {
+  background: var(--color-hoy);
+  color: #3a3200;
+  font-weight: bold;
+  box-shadow: inset 0 0 0 2px var(--color-hoy-borde);
+}
+
+.fila-contenido td.hoy {
+  background: var(--color-hoy-contenido);
+}
+
+.fila-fechas td.pasado {
+  background: var(--color-pasado);
+  color: var(--color-pasado-texto);
+}
+
+.fila-contenido td.pasado {
+  background: var(--color-pasado);
+  opacity: 0.82;
+}
+
+/* Sábado y domingo más chicos */
 table tr td:nth-child(7),
-table tr th:nth-child(7) {
-  width: 80px;
-}
-
-/* Domingo */
+table tr th:nth-child(7),
 table tr td:nth-child(8),
 table tr th:nth-child(8) {
   width: 80px;
 }
 
-/* TABLET */
+footer {
+  margin-top: 28px;
+  padding: 18px 12px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-texto-secundario);
+  background: transparent;
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
   .contenedor {
-    padding: 14px;
-    border-radius: 12px;
+    padding: 18px;
+    border-radius: 18px;
   }
 
   h1 {
-    font-size: 23px;
-  }
-
-  .subtitulo {
-    font-size: 13px;
+    font-size: 27px;
   }
 
   table {
     min-width: 980px;
   }
-
-  .semana {
-    width: 85px;
-    font-size: 15px;
-  }
-
-  .fila-dias td {
-    font-size: 13px;
-    height: 32px;
-  }
-
-  .fila-fechas td {
-    font-size: 12px;
-    height: 26px;
-  }
-
-  .fila-contenido td {
-    height: 140px;
-    padding: 5px;
-  }
-
-  .evento {
-    padding: 7px;
-  }
-
-  .evento h3 {
-    font-size: 12px;
-  }
-
-  .evento .hora,
-  .evento .modo,
-  .evento .detalle,
-  .evento .link {
-    font-size: 10px;
-  }
 }
 
-/* CELULAR */
 @media (max-width: 768px) {
   body {
-    padding: 6px;
+    padding: 8px;
   }
 
   .contenedor {
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(84, 88, 112, 0.08);
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .barra-superior {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .boton-tema {
+    width: 100%;
   }
 
   h1 {
-    font-size: 18px;
-    line-height: 1.2;
-    margin-bottom: 8px;
+    font-size: 22px;
   }
 
   .subtitulo {
-    font-size: 12px;
-    margin-bottom: 12px;
-    line-height: 1.3;
+    font-size: 13px;
+  }
+
+  .info-card {
+    padding: 14px;
   }
 
   table {
     min-width: 860px;
   }
 
-  .semana {
-    width: 70px;
-    font-size: 12px;
-    padding: 4px;
-  }
-
-  .fila-dias td {
-    font-size: 11px;
-    height: 30px;
-    padding: 2px;
-  }
-
-  .fila-fechas td {
-    font-size: 10px;
-    height: 24px;
-  }
-
   .fila-contenido td {
     height: 120px;
-    padding: 4px;
-  }
-
-  .celda {
-    gap: 4px;
-  }
-
-  .evento {
-    padding: 5px;
-    border-radius: 8px;
-  }
-
-  .evento h3 {
-    font-size: 10px;
-    margin-bottom: 3px;
-  }
-
-  .evento .hora,
-  .evento .modo,
-  .evento .detalle {
-    font-size: 9px;
-    line-height: 1.2;
-  }
-
-  .evento .link {
-    font-size: 9px;
-    margin-top: 4px;
-  }
-
-  table tr td:nth-child(7),
-  table tr th:nth-child(7),
-  table tr td:nth-child(8),
-  table tr th:nth-child(8) {
-    width: 55px;
-    font-size: 10px;
   }
 }
 
-/* CELULAR CHICO */
 @media (max-width: 480px) {
-  body {
-    padding: 4px;
-  }
-
-  .contenedor {
-    padding: 8px;
-  }
-
   h1 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
-  .subtitulo {
-    font-size: 11px;
+  .subtitulo,
+  .info-card p,
+  footer {
+    font-size: 12px;
   }
 
   table {
     min-width: 780px;
-  }
-
-  .semana {
-    width: 60px;
-    font-size: 11px;
-  }
-
-  .fila-dias td {
-    font-size: 10px;
-    height: 28px;
-  }
-
-  .fila-fechas td {
-    font-size: 9px;
-    height: 22px;
-  }
-
-  .fila-contenido td {
-    height: 110px;
-    padding: 3px;
-  }
-
-  .evento {
-    padding: 4px;
-  }
-
-  .evento h3 {
-    font-size: 9px;
-  }
-
-  .evento .hora,
-  .evento .modo,
-  .evento .detalle,
-  .evento .link {
-    font-size: 8px;
-  }
-
-  table tr td:nth-child(7),
-  table tr th:nth-child(7),
-  table tr td:nth-child(8),
-  table tr th:nth-child(8) {
-    width: 48px;
-  }
-}
-
-/* ===== CARD DE INFORMACIÓN ===== */
-
-.info-card {
-  max-width: 750px;
-  margin: 16px auto 20px;
-  padding: 16px 18px;
-  border-radius: 12px;
-
-  background: #f4f6fb;
-  border: 1px solid #e3e6f0;
-
-  box-shadow: 0 6px 18px rgba(84, 88, 112, 0.08);
-  text-align: center;
-}
-
-.info-card p {
-  margin: 6px 0;
-  font-size: 14px;
-  color: #4b4b63;
-  line-height: 1.5;
-}
-
-/* jerarquía visual sutil */
-.info-card p:first-child {
-  font-weight: 600;
-}
-
-.info-card p:nth-child(2) {
-  color: #a94442; /* aviso */
-}
-
-/* ===== FOOTER ===== */
-
-footer {
-  margin-top: 30px;
-  padding: 18px 12px;
-
-  text-align: center;
-  font-size: 14px;
-
-  color: #5f5f75;
-  background: #f9f9fd;
-
-  border-top: 1px solid #e3e6f0;
-}
-
-/* mail link */
-footer a {
-  color: #45658D;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-/* ===== FECHAS DINÁMICAS ===== */
-
-/* HOY */
-.fila-fechas td.hoy {
-  background: #fff2a8;
-  color: #4b3f00;
-  font-weight: bold;
-  box-shadow: inset 0 0 0 2px #d6b800;
-}
-
-/* contenido del día actual */
-.fila-contenido td.hoy {
-  background: #F5F227;
-}
-
-/* PASADO */
-.fila-fechas td.pasado {
-  background: #eeeeee;
-  color: #8a8a8a;
-}
-.acciones-semanas {
-  display: flex;
-  justify-content: center;
-  margin: 14px 0 18px;
-}
-
-#togglePasadas {
-  border: 1px solid #d8dbe6;
-  background: #ffffff;
-  color: #4b4b63;
-  padding: 10px 14px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-#togglePasadas:hover {
-  background: #f4f6fb;
-}
-
-#togglePasadas:active {
-  transform: scale(0.98);
-}
-
-.semana-pasada-oculta {
-  display: none;
-}
-
-/* contenido pasado */
-.fila-contenido td.pasado {
-  background: #eeeeee;
-  opacity: 0.7;
-}
-/* estilo base */
-.semana {
-  font-weight: 700;
-  background: #eef1fb;
-  color: #4b4b63;
-}
-
-/* semanas pasadas */
-tr[data-estado-semana="pasada"] .semana {
-  background: #f1f1f5;
-  color: #9aa0b5;
-  border-color: #e0e3eb;
-}
-
-/* semana actual  */
-tr[data-estado-semana="actual"] .semana {
-  background: #dfe7ff;
-  color: #2f3a8f;
-}
-.info-card ul {
-  padding-left: 18px;
-  margin: 6px 0 12px;
-}
-
-.info-card li {
-  margin-bottom: 4px;
-}
-
-.info-card .aviso {
-  margin-top: 12px;
-  font-size: 13px;
-  color: #7a7a8c;
-}
-
-/* semanas futuras  */
-tr[data-estado-semana="futura"] .semana {
-  background: #eef1fb;
-  color: #4b4b63;
-}
-.info-card {
-  text-align: left;
-}
-
-/* grid de 2 columnas */
-.info-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-/* bloques internos */
-.info-bloque p {
-  margin: 4px 0 10px;
-  font-size: 14px;
-}
-
-/* títulos internos */
-.info-bloque strong {
-  display: block;
-  font-size: 13px;
-  color: #4b4b63;
-  margin-top: 6px;
-}
-
-/* aviso final */
-.info-card .aviso {
-  margin-top: 10px;
-  font-size: 12px;
-  color: #7a7a8c;
-}
-
-/* responsive (mobile) */
-@media (max-width: 700px) {
-  .info-grid {
-    grid-template-columns: 1fr;
   }
 }
