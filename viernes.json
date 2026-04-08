@@ -31,7 +31,7 @@
       "materia": "Técnicas de Programación",
       "hora": "18:30 a 22:00",
       "modo": "Clase virtual",
-      "detalle": "Clase de la materia",
+      "detalle": "Comentarios e input()",
       "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
       "tipo": "tecnicas"
     }
@@ -41,7 +41,7 @@
       "materia": "Técnicas de Programación",
       "hora": "18:30 a 22:00",
       "modo": "Clase virtual",
-      "detalle": "Clase de la materia",
+      "detalle": "Bucles",
       "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
       "tipo": "tecnicas"
     }
@@ -59,7 +59,7 @@
       "materia": "Técnicas de Programación",
       "hora": "18:30 a 22:00",
       "modo": "Clase virtual",
-      "detalle": "Clase de la materia",
+      "detalle": "Continuamos con Listas []",
       "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
       "tipo": "tecnicas"
     }
@@ -69,7 +69,7 @@
       "materia": "Técnicas de Programación",
       "hora": "18:30 a 22:00",
       "modo": "Clase virtual",
-      "detalle": "Clase de la materia",
+      "detalle": "Diccionarios",
       "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
       "tipo": "tecnicas"
     }
@@ -79,7 +79,7 @@
       "materia": "Técnicas de Programación",
       "hora": "18:30 a 22:00",
       "modo": "Clase virtual",
-      "detalle": "Clase de la materia",
+      "detalle": "Excepciones",
       "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
       "tipo": "tecnicas"
     }
@@ -89,7 +89,7 @@
       "materia": "Técnicas de Programación",
       "hora": "18:30 a 22:00",
       "modo": "Clase virtual",
-      "detalle": "Clase de la materia",
+      "detalle": "Práctica pre-parcial 2",
       "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
       "tipo": "tecnicas"
     }
