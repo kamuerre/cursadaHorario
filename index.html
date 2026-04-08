@@ -1,77 +1,70 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang='es'>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Horario de cursada Tecnicatura en Desarrollo de Software</title>
-    
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Horario de cursada Tecnicatura en Desarrollo de Software</title>
+  <link rel='stylesheet' href='style.css' />
 </head>
-
 <body>
-
-    <div class="contenedor">
-        <div class="barra-superior">
-    <div class="encabezado">
+  <div class='contenedor'>
+    <div class='barra-superior'>
+      <div class='encabezado'>
         <h1>Horario de cursada</h1>
-        <p class="subtitulo">Tecnicatura en Desarrollo de Software</p>
-    </div>
+        <p class='subtitulo'>Tecnicatura en Desarrollo de Software</p>
+      </div>
 
-    <button id="botonTema" class="boton-tema" type="button" aria-label="Cambiar tema">
+      <button id='botonTema' class='boton-tema' type='button' aria-label='Cambiar tema'>
         🌙 Modo oscuro
-    </button>
-</div>
-
-  <div class="info-card">
-
-  <div class="info-grid">
-
-    <div class="info-bloque">
-      <strong>Sobre este horario</strong>
-      <p>Uso personal para organización de cursada.</p>
-
-      <strong>Estado</strong>
-      <p>
-        Pendiente de actualizar:
-        <br>• Técnicas de Programación  
-        <br>• Administración de BD
-      </p>
+      </button>
     </div>
 
-    <div class="info-bloque">
-      <strong>Actualización</strong>
-      <p>Semanal -<br> Ultima: 08/04 – 10:09</p>
+    <div class='info-card'>
+      <div class='info-grid'>
+        <div class='info-bloque'>
+          <strong>Sobre este horario</strong>
+          <p>Uso personal para organización de cursada.</p>
 
-      <strong>Accesos</strong>
-      <p>
-        <a href="https://aulasvirtuales.bue.edu.ar/login/index.php/" target="_blank">Aula virtual</a><br>
-        <a href="https://meet.google.com/eqe-cowo-uki" target="_blank">Meet de estudio</a>
-      </p>
+          <strong>Estado</strong>
+          <p>
+            Pendiente de actualizar:
+            <br />• Técnicas de Programación
+            <br />• Administración de BD
+          </p>
+        </div>
 
-      <strong>Modalidad</strong>
-      <p>Análisis Matemático → desde aula virtual</p>
+        <div class='info-bloque'>
+          <strong>Actualización</strong>
+          <p>Semanal -<br />Última: 08/04 – 10:09</p>
+
+          <strong>Accesos</strong>
+          <p>
+            <a href='https://aulasvirtuales.bue.edu.ar/login/index.php/' target='_blank' rel='noopener noreferrer'>Aula virtual</a><br />
+            <a href='https://meet.google.com/eqe-cowo-uki' target='_blank' rel='noopener noreferrer'>Meet de estudio</a>
+          </p>
+
+          <strong>Modalidad</strong>
+          <p>Análisis Matemático → desde aula virtual</p>
+        </div>
+      </div>
+
+      <p class='aviso'>Las semanas pasadas se muestran al final.</p>
     </div>
 
+    <div class='acciones-semanas'>
+      <button id='togglePasadas' type='button'>Ver semanas pasadas</button>
+    </div>
+
+    <div class='tabla-responsive'>
+      <table id='tablaHorario'></table>
+    </div>
+
+    <footer>
+      Camila Rasnosky -
+      <a href='mailto:crasnosky@gmail.com'>crasnosky@gmail.com</a>
+    </footer>
   </div>
 
-  <p class="aviso">
-    Las semanas pasadas se muestran al final.
-  </p>
-
-</div>
-</div>
-        <div class="acciones-semanas">
-           <button id="togglePasadas" type="button">Ver semanas pasadas</button>
-        </div>
-        <table id="tablaHorario"></table>
-    </div>
-    <script src="script.js"></script>
-<footer>
-  Camila Rasnosky - 
-  <a href="mailto:crasnosky@gmail.com">crasnosky@gmail.com</a>
-</footer>
+  <script src='script.js'></script>
 </body>
-
 </html>
