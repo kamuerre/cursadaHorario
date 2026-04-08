@@ -715,3 +715,24 @@ body.tema-oscuro .parcial .modo {
   background: #ff6b6b;
   color: #2a0f0f;
 }
+/* PARCIAL - ajuste específico modo oscuro */
+body.tema-oscuro .parcial {
+  color: #ffffff;
+}
+
+body.tema-oscuro .parcial h3,
+body.tema-oscuro .parcial .hora,
+body.tema-oscuro .parcial .detalle {
+  color: #ffffff;
+}
+
+/* el badge sigue destacando */
+body.tema-oscuro .parcial .modo {
+  background: #ff6b6b;
+  color: #2a0f0f; /* este queda oscuro para contraste */
+}
+
+/* links visibles */
+body.tema-oscuro .parcial .link {
+  color: #ffdede;
+}
