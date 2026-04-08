@@ -273,3 +273,40 @@ async function cargarEventos() {
 }
 
 cargarEventos();
+function aplicarTemaGuardado() {
+  const temaGuardado = localStorage.getItem('tema');
+
+  if (temaGuardado === 'oscuro') {
+    document.body.classList.add('tema-oscuro');
+  }
+
+  actualizarTextoBotonTema();
+}
+
+function alternarTema() {
+  document.body.classList.toggle('tema-oscuro');
+
+  const temaActual = document.body.classList.contains('tema-oscuro')
+    ? 'oscuro'
+    : 'claro';
+
+  localStorage.setItem('tema', temaActual);
+  actualizarTextoBotonTema();
+}
+
+function actualizarTextoBotonTema() {
+  const botonTema = document.getElementById('botonTema');
+  if (!botonTema) return;
+
+  const esOscuro = document.body.classList.contains('tema-oscuro');
+  botonTema.textContent = esOscuro ? '☀️ Modo claro' : '🌙 Modo oscuro';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  aplicarTemaGuardado();
+
+  const botonTema = document.getElementById('botonTema');
+  if (botonTema) {
+    botonTema.addEventListener('click', alternarTema);
+  }
+});
