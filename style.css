@@ -1,61 +1,79 @@
 :root {
-  --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --fuente-principal: Arial, sans-serif;
 
-  --color-fondo: #f4f6fb;
+  --color-fondo: #f5f7fb;
   --color-superficie: #ffffff;
-  --color-superficie-secundaria: #f8faff;
-  --color-borde: #dbe2f0;
-  --color-texto: #243046;
-  --color-texto-secundario: #5f6c85;
-  --color-titulo: #1f2a44;
-  --color-sombra: 0 10px 30px rgba(31, 42, 68, 0.1);
+  --color-superficie-2: #f8faff;
+  --color-borde: #dbe2ee;
+  --color-texto: #283142;
+  --color-texto-secundario: #667089;
+  --color-titulo: #34405c;
+  --color-sombra: 0 10px 30px rgba(84, 88, 112, 0.10);
 
   --color-acento: #45658d;
   --color-acento-hover: #314d72;
 
-  --color-semana: #e9eef8;
-  --color-dia: #edf3ff;
-  --color-fecha: #f8fbff;
-  --color-mes-nuevo: #fce8ea;
+  --color-info-bg: #f4f7fc;
+  --color-info-borde: #e1e7f2;
 
-  --color-info-bg: #f5f8ff;
-  --color-info-borde: #d8e3f5;
+  --color-semana: #eef2fb;
+  --color-semana-pasada: #f1f3f7;
+  --color-semana-pasada-texto: #9aa3b7;
+  --color-semana-actual: #dfe8ff;
+  --color-semana-actual-texto: #2f4687;
+
+  --color-dia: #f7efd4;
+  --color-fecha: #f8e7cd;
+  --color-mes-nuevo: #f6d9dc;
 
   --color-hoy: #fff2a8;
   --color-hoy-borde: #d6b800;
   --color-hoy-contenido: #fff9d6;
 
-  --color-pasado: #eceff4;
-  --color-pasado-texto: #8a93a5;
+  --color-pasado: #eeeeee;
+  --color-pasado-texto: #8a8a8a;
+
+  --color-evento-texto: #243046;
+  --color-evento-titulo: #243046;
+  --color-link: #5b55a3;
 }
 
 body.tema-oscuro {
   --color-fondo: #0f1726;
   --color-superficie: #172033;
-  --color-superficie-secundaria: #1d2940;
-  --color-borde: #2b3a57;
+  --color-superficie-2: #1c2740;
+  --color-borde: #2d3a57;
   --color-texto: #e7edf8;
-  --color-texto-secundario: #aab6cf;
+  --color-texto-secundario: #aeb9cf;
   --color-titulo: #ffffff;
   --color-sombra: 0 14px 36px rgba(0, 0, 0, 0.35);
 
   --color-acento: #8eb8ff;
-  --color-acento-hover: #b4d1ff;
+  --color-acento-hover: #b5d1ff;
 
-  --color-semana: #22314d;
-  --color-dia: #20304d;
-  --color-fecha: #1b2740;
-  --color-mes-nuevo: #49303b;
-
-  --color-info-bg: #1a2740;
+  --color-info-bg: #1b2740;
   --color-info-borde: #304261;
 
-  --color-hoy: #5d4d00;
-  --color-hoy-borde: #f1cd2e;
-  --color-hoy-contenido: #4b3f00;
+  --color-semana: #253452;
+  --color-semana-pasada: #1d273d;
+  --color-semana-pasada-texto: #91a0bd;
+  --color-semana-actual: #253d74;
+  --color-semana-actual-texto: #dbe6ff;
+
+  --color-dia: #21314d;
+  --color-fecha: #1d2a43;
+  --color-mes-nuevo: #47303d;
+
+  --color-hoy: #695700;
+  --color-hoy-borde: #f2cb30;
+  --color-hoy-contenido: #564900;
 
   --color-pasado: #1b2333;
-  --color-pasado-texto: #7f8aa3;
+  --color-pasado-texto: #7f8aa1;
+
+  --color-evento-texto: #243046;
+  --color-evento-titulo: #243046;
+  --color-link: #39479d;
 }
 
 * {
@@ -68,11 +86,11 @@ html {
 
 body {
   margin: 0;
-  padding: 16px;
+  padding: 12px;
   font-family: var(--fuente-principal);
-  background: linear-gradient(180deg, var(--color-fondo) 0%, var(--color-superficie-secundaria) 100%);
+  background: var(--color-fondo);
   color: var(--color-texto);
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 .contenedor {
@@ -80,10 +98,10 @@ body {
   margin: 0 auto;
   background: var(--color-superficie);
   border: 1px solid var(--color-borde);
-  border-radius: 22px;
+  border-radius: 18px;
   box-shadow: var(--color-sombra);
-  padding: 24px;
-  transition: background 0.3s ease, border-color 0.3s ease;
+  padding: 20px;
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .barra-superior {
@@ -97,33 +115,34 @@ body {
 
 .encabezado {
   flex: 1;
-  min-width: 260px;
+  min-width: 240px;
 }
 
 h1 {
   margin: 0 0 8px;
-  font-size: 32px;
-  line-height: 1.15;
+  text-align: center;
+  font-size: 28px;
   color: var(--color-titulo);
 }
 
 .subtitulo {
   margin: 0;
+  text-align: center;
   color: var(--color-texto-secundario);
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .boton-tema,
 #togglePasadas {
   border: 1px solid var(--color-borde);
-  background: var(--color-superficie-secundaria);
+  background: var(--color-superficie-2);
   color: var(--color-texto);
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 10px 14px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.25s ease;
+  transition: 0.2s ease;
 }
 
 .boton-tema:hover,
@@ -134,53 +153,51 @@ h1 {
 }
 
 .info-card {
-  max-width: 980px;
-  margin: 0 auto 22px;
-  padding: 18px 20px;
-  border-radius: 16px;
+  max-width: 860px;
+  margin: 0 auto 20px;
+  padding: 16px 18px;
+  border-radius: 14px;
   background: var(--color-info-bg);
   border: 1px solid var(--color-info-borde);
-  box-shadow: 0 8px 24px rgba(20, 30, 50, 0.08);
+  box-shadow: 0 6px 18px rgba(84, 88, 112, 0.08);
   text-align: left;
 }
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
 .info-bloque strong {
   display: block;
-  margin-top: 2px;
-  margin-bottom: 6px;
+  margin: 4px 0 6px;
+  font-size: 13px;
   color: var(--color-titulo);
 }
 
 .info-bloque p {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--color-texto);
 }
 
 .info-card a,
-footer a,
-.evento .link {
+footer a {
   color: var(--color-acento);
   text-decoration: none;
   font-weight: 600;
 }
 
 .info-card a:hover,
-footer a:hover,
-.evento .link:hover {
+footer a:hover {
   color: var(--color-acento-hover);
   text-decoration: underline;
 }
 
 .aviso {
-  margin: 6px 0 0;
+  margin: 8px 0 0;
   font-size: 13px;
   color: var(--color-texto-secundario);
 }
@@ -188,7 +205,7 @@ footer a:hover,
 .acciones-semanas {
   display: flex;
   justify-content: center;
-  margin: 0 0 16px;
+  margin: 14px 0 18px;
 }
 
 .tabla-responsive {
@@ -196,16 +213,14 @@ footer a:hover,
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  border-radius: 18px;
+  border-radius: 14px;
 }
 
 table {
   width: max-content;
   min-width: 1100px;
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
   table-layout: fixed;
-  border-radius: 18px;
 }
 
 td,
@@ -233,70 +248,80 @@ th {
 .fila-dias td {
   background: var(--color-dia);
   font-weight: 700;
-  height: 38px;
+  height: 34px;
   vertical-align: middle;
   font-size: 14px;
-  color: var(--color-titulo);
+  color: #6b6248;
 }
 
 .fila-fechas td {
   background: var(--color-fecha);
-  height: 30px;
+  height: 28px;
   vertical-align: middle;
   font-size: 13px;
-  color: var(--color-texto-secundario);
+  color: #7a694f;
   font-weight: 600;
 }
 
 .fila-fechas.mes-nuevo td {
   background: var(--color-mes-nuevo);
+  color: #815e65;
 }
 
 .fila-contenido td {
-  height: 136px;
+  height: 108px;
+  min-height: 108px;
   background: var(--color-superficie);
-  padding: 8px;
+  padding: 6px;
 }
 
 .celda {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   align-items: stretch;
+  justify-content: flex-start;
 }
 
 .evento {
-  border-radius: 14px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 8px;
   text-align: left;
-  border: 1px solid rgba(90, 90, 110, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-
-.evento:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(90, 90, 110, 0.10);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  color: var(--color-evento-texto);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .evento h3 {
-  margin: 0 0 6px;
+  margin: 0 0 4px;
   font-size: 13px;
-  line-height: 1.3;
-  color: #243046;
-}
-
-body.tema-oscuro .evento h3 {
-  color: #122033;
+  line-height: 1.2;
+  color: var(--color-evento-titulo);
 }
 
 .evento .hora,
 .evento .modo,
 .evento .detalle {
   font-size: 11px;
-  line-height: 1.4;
-  margin-top: 3px;
+  line-height: 1.3;
+  margin-top: 2px;
+  color: var(--color-evento-texto);
+}
+
+.evento .link {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 11px;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--color-link);
+}
+
+.evento .link:hover {
+  text-decoration: underline;
 }
 
 .logica {
@@ -335,22 +360,22 @@ body.tema-oscuro .evento h3 {
 }
 
 .presencial {
-  color: #3f7d39;
+  color: #4a7f44 !important;
   font-weight: 700;
 }
 
 .asincronica {
-  color: #9c761f;
+  color: #9a7723 !important;
   font-weight: 700;
 }
 
 .virtual {
-  color: #a05731;
+  color: #9f5d3d !important;
   font-weight: 700;
 }
 
 .especial {
-  color: #af4654;
+  color: #ac4b5f !important;
   font-weight: 700;
 }
 
@@ -360,7 +385,7 @@ body.tema-oscuro .evento h3 {
 
 .fila-fechas td.hoy {
   background: var(--color-hoy);
-  color: #3a3200;
+  color: #4b3f00;
   font-weight: 700;
   box-shadow: inset 0 0 0 2px var(--color-hoy-borde);
 }
@@ -383,6 +408,21 @@ body.tema-oscuro .evento h3 {
   display: none;
 }
 
+tr[data-estado-semana="pasada"] .semana {
+  background: var(--color-semana-pasada);
+  color: var(--color-semana-pasada-texto);
+}
+
+tr[data-estado-semana="actual"] .semana {
+  background: var(--color-semana-actual);
+  color: var(--color-semana-actual-texto);
+}
+
+tr[data-estado-semana="futura"] .semana {
+  background: var(--color-semana);
+  color: var(--color-titulo);
+}
+
 table tr td:nth-child(7),
 table tr th:nth-child(7),
 table tr td:nth-child(8),
@@ -391,37 +431,58 @@ table tr th:nth-child(8) {
 }
 
 footer {
-  margin-top: 28px;
-  padding: 18px 12px 4px;
+  margin-top: 26px;
+  padding: 16px 12px 4px;
   text-align: center;
   font-size: 14px;
   color: var(--color-texto-secundario);
-  background: transparent;
 }
 
 @media (max-width: 1024px) {
   .contenedor {
-    padding: 18px;
-    border-radius: 18px;
+    padding: 14px;
+    border-radius: 14px;
   }
 
   h1 {
-    font-size: 27px;
+    font-size: 24px;
   }
 
   table {
     min-width: 980px;
   }
+
+  .semana {
+    width: 86px;
+    min-width: 86px;
+    font-size: 15px;
+  }
+
+  .fila-contenido td {
+    height: 104px;
+    min-height: 104px;
+  }
+
+  .evento h3 {
+    font-size: 12px;
+  }
+
+  .evento .hora,
+  .evento .modo,
+  .evento .detalle,
+  .evento .link {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 768px) {
   body {
-    padding: 8px;
+    padding: 6px;
   }
 
   .contenedor {
-    padding: 14px;
-    border-radius: 14px;
+    padding: 10px;
+    border-radius: 12px;
   }
 
   .barra-superior {
@@ -434,20 +495,20 @@ footer {
   }
 
   h1 {
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 1.2;
   }
 
   .subtitulo {
-    font-size: 13px;
-  }
-
-  .info-card {
-    padding: 14px;
+    font-size: 12px;
   }
 
   .info-grid {
     grid-template-columns: 1fr;
-    gap: 8px;
+  }
+
+  .info-bloque p {
+    font-size: 13px;
   }
 
   table {
@@ -455,30 +516,39 @@ footer {
   }
 
   .semana {
-    width: 72px;
-    min-width: 72px;
-    font-size: 13px;
-  }
-
-  .fila-dias td {
+    width: 68px;
+    min-width: 68px;
     font-size: 12px;
   }
 
-  .fila-fechas td {
+  .fila-dias td {
     font-size: 11px;
+    height: 30px;
+  }
+
+  .fila-fechas td {
+    font-size: 10px;
+    height: 24px;
   }
 
   .fila-contenido td {
-    height: 120px;
-    padding: 6px;
+    height: 94px;
+    min-height: 94px;
+    padding: 4px;
+  }
+
+  .celda {
+    gap: 4px;
   }
 
   .evento {
-    padding: 7px;
+    padding: 5px;
+    border-radius: 8px;
   }
 
   .evento h3 {
-    font-size: 11px;
+    font-size: 10px;
+    margin-bottom: 3px;
   }
 
   .evento .hora,
@@ -486,12 +556,28 @@ footer {
   .evento .detalle,
   .evento .link {
     font-size: 9px;
+    line-height: 1.2;
+  }
+
+  table tr td:nth-child(7),
+  table tr th:nth-child(7),
+  table tr td:nth-child(8),
+  table tr th:nth-child(8) {
+    width: 52px;
   }
 }
 
 @media (max-width: 480px) {
+  body {
+    padding: 4px;
+  }
+
+  .contenedor {
+    padding: 8px;
+  }
+
   h1 {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .subtitulo,
@@ -506,21 +592,46 @@ footer {
   }
 
   .semana {
-    width: 60px;
-    min-width: 60px;
+    width: 58px;
+    min-width: 58px;
     font-size: 11px;
   }
 
+  .fila-dias td {
+    font-size: 10px;
+    height: 28px;
+  }
+
+  .fila-fechas td {
+    font-size: 9px;
+    height: 22px;
+  }
+
   .fila-contenido td {
-    height: 104px;
-    padding: 4px;
+    height: 86px;
+    min-height: 86px;
+    padding: 3px;
   }
 
   .evento {
-    padding: 5px;
+    padding: 4px;
   }
 
   .evento h3 {
     font-size: 9px;
+  }
+
+  .evento .hora,
+  .evento .modo,
+  .evento .detalle,
+  .evento .link {
+    font-size: 8px;
+  }
+
+  table tr td:nth-child(7),
+  table tr th:nth-child(7),
+  table tr td:nth-child(8),
+  table tr th:nth-child(8) {
+    width: 46px;
   }
 }
