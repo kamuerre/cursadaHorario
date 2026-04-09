@@ -2,7 +2,7 @@
   "2026-03-26": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "Clase presencial",
       "detalle": "Presentación – Conjuntos Numéricos",
       "tipo": "analisis"
@@ -19,7 +19,7 @@
   "2026-04-09": [ 
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "Clase virtual",
       "detalle": "OJO Cierra el formulario del aula virtual, hay que entregarlo!!! - Matrices: Operaciones. Clasificación",
       "tipo": "analisis",
@@ -29,7 +29,7 @@
   "2026-04-16": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "Clase virtual",
       "detalle": "Matriz Inversa",
       "tipo": "analisis",
@@ -39,7 +39,7 @@
   "2026-04-23": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "Clase virtual",
       "detalle": "Determinantes",
       "tipo": "analisis",
