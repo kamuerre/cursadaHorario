@@ -49,7 +49,7 @@
   "2026-04-30": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "Clase virtual",
       "detalle": "Repaso",
       "tipo": "analisis",
@@ -59,7 +59,7 @@
   "2026-05-07": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "1° Parcial escrito individual – Clase presencial",
       "detalle": "",
       "tipo": "parcial"
@@ -68,7 +68,7 @@
   "2026-05-14": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "Clase virtual",
       "detalle": "Sistemas de ecuaciones lineales",
       "tipo": "analisis",
@@ -78,7 +78,7 @@
   "2026-05-21": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "Clase virtual",
       "detalle": "Vectores en R² y R³",
       "tipo": "analisis",
@@ -88,7 +88,7 @@
   "2026-05-28": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "Clase virtual",
       "detalle": "Conjuntos, Relaciones",
       "tipo": "analisis",
@@ -98,7 +98,7 @@
   "2026-06-04": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "Clase virtual",
       "detalle": "Funciones",
       "tipo": "analisis",
@@ -108,7 +108,7 @@
   "2026-06-11": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "Clase virtual",
       "detalle": "Repaso",
       "tipo": "analisis",
@@ -118,7 +118,7 @@
   "2026-06-18": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "2° Parcial escrito individual – Clase presencial",
       "detalle": "",
       "tipo": "parcial"
@@ -127,7 +127,7 @@
   "2026-06-25": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "Recuperatorios – Clase presencial",
       "detalle": "",
       "tipo": "recuperatorio"
@@ -136,7 +136,7 @@
   "2026-07-02": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:30 a 21:00",
+      "hora": "18:00 a 21:00",
       "modo": "Finalización del cuatrimestre",
       "detalle": "",
       "tipo": "fin"
