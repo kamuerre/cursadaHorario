@@ -165,18 +165,10 @@
   ],
   "2026-06-01": [
     {
-      "materia": "Base de Datos",
-      "hora": "18:00 a 20:00",
-     "modo": "Clase asincrónica",
-      "detalle": "Clase de la materia",
-      "tipo": "base-datos"
-    },
-    {
       "materia": "Técnicas de Programación",
-      "hora": "20:00 a 22:00",
-      "modo": "Clase virtual",
+      "hora": "18:00 a 22:00",
+      "modo": "Clase PRESENCIAL",
       "detalle": "Clase de la materia",
-      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
       "tipo": "tecnicas"
     }
   ],
