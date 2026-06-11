@@ -107,9 +107,8 @@
     {
       "materia": "Técnicas de Programación",
       "hora": "18:30 a 22:00",
-      "modo": "Clase virtual",
-      "detalle": "Clase de la materia",
-      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "modo": "Clase asincrónica",
+      "detalle": "¡¡Enviar tp menu con funciones!!",
       "tipo": "tecnicas"
     }
   ],
