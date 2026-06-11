@@ -108,10 +108,11 @@
   "2026-06-11": [
     {
       "materia": "Elementos de Análisis Matemático",
-      "hora": "18:00 a 21:00",
-      "modo": "Clase Presencial",
-      "detalle": "Repaso",
+      "hora": "18:30 a 21:00",
+      "modo": "Reunión virtual",
+      "detalle": "Reunión obligatoria con alumnos de 3°",
       "tipo": "analisis"
+      "meet": "https://meet.google.com/bwb-nchp-jac"
       
     }
   ],
