@@ -70,7 +70,6 @@ body.tema-oscuro {
   --color-pasado: #1b2333;
   --color-pasado-texto: #7f8aa3;
 
-  /* Las tarjetas siguen siendo pastel, por eso su texto debe ser oscuro */
   --color-evento-texto: #243046;
   --color-evento-link: #4f4aa0;
 }
@@ -86,7 +85,7 @@ body {
   background: var(--color-fondo);
   color: var(--color-texto);
   transition: background 0.25s ease, color 0.25s ease;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 .contenedor {
@@ -202,7 +201,6 @@ footer a:hover {
   margin: 14px 0 18px;
 }
 
-/* SOLO en celular/tablet hace scroll */
 .tabla-responsive {
   width: 100%;
   overflow-x: hidden;
@@ -232,6 +230,7 @@ th {
   vertical-align: middle;
   color: var(--color-titulo);
 }
+
 .fila-dias td,
 .fila-fechas td,
 .fila-contenido td {
@@ -325,11 +324,6 @@ th {
   background: #fff4b8;
 }
 
-.parcial {
-  background: #ffe4e4;
-  border: 1px solid #e5b3b3;
-}
-
 .recuperatorio {
   background: #fff1d9;
   border: 1px solid #e3c38d;
@@ -409,7 +403,7 @@ footer {
   padding: 18px 12px;
   text-align: center;
   font-size: 14px;
-  color: var(--color-texto-secundario);
+  color: var(--texto-secundario);
   background: transparent;
 }
 
@@ -482,6 +476,7 @@ footer {
     font-size: 10px;
   }
 }
+
 /* Celular */
 @media (max-width: 768px) {
   body {
@@ -586,6 +581,7 @@ footer {
     margin-top: 4px;
   }
 }
+
 /* Celular chico */
 @media (max-width: 480px) {
   body {
@@ -620,120 +616,4 @@ footer {
     font-size: 11px;
   }
 
-  .fila-dias td,
-  .fila-fechas td,
-  .fila-contenido td {
-    width: 103px;
-  }
-
-  .fila-dias td {
-    font-size: 10px;
-    height: 28px;
-  }
-
-  .fila-fechas td {
-    font-size: 9px;
-    height: 22px;
-  }
-
-  .fila-contenido td {
-    min-height: 100px;
-    height: auto;
-    padding: 3px;
-  }
-
-  .evento {
-    padding: 4px;
-  }
-
-  .evento h3 {
-    font-size: 9px;
-  }
-
-  .evento .hora,
-  .evento .modo,
-  .evento .detalle,
-  .evento .link {
-    font-size: 8px;
-  }
-}
-}
-.parcial {
-  background: linear-gradient(135deg, #ffe3e3, #ffd1d1);
-  border: 2px solid #d95353;
-  box-shadow: 0 0 0 1px rgba(217, 83, 83, 0.15);
-  position: relative;
-}
-
-/* borde lateral destacado */
-.parcial::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 6px;
-  background: #d95353;
-  border-radius: 10px 0 0 10px;
-}
-
-/* título más fuerte */
-.parcial h3 {
-  color: #8b1f1f;
-  font-weight: 700;
-}
-
-/* etiqueta tipo badge */
-.parcial .modo {
-  font-weight: 700;
-  color: #ffffff;
-  background: #d95353;
-  display: inline-block;
-  padding: 2px 6px;
-  border-radius: 6px;
-  font-size: 10px;
-  margin-top: 4px;
-}
-
-/* detalle más visible */
-.parcial .detalle {
-  font-weight: 500;
-}
-body.tema-oscuro .parcial {
-  background: linear-gradient(135deg, #5a2a2a, #4a2020);
-  border: 2px solid #ff6b6b;
-}
-
-body.tema-oscuro .parcial::before {
-  background: #ff6b6b;
-}
-
-body.tema-oscuro .parcial h3 {
-  color: #ffe3e3;
-}
-
-body.tema-oscuro .parcial .modo {
-  background: #ff6b6b;
-  color: #2a0f0f;
-}
-/* PARCIAL - ajuste específico modo oscuro */
-body.tema-oscuro .parcial {
-  color: #ffffff;
-}
-
-body.tema-oscuro .parcial h3,
-body.tema-oscuro .parcial .hora,
-body.tema-oscuro .parcial .detalle {
-  color: #ffffff;
-}
-
-/* el badge sigue destacando */
-body.tema-oscuro .parcial .modo {
-  background: #ff6b6b;
-  color: #2a0f0f; /* este queda oscuro para contraste */
-}
-
-/* links visibles */
-body.tema-oscuro .parcial .link {
-  color: #ffdede;
-}
+  .fila-dias td
