@@ -239,10 +239,11 @@ function configurarBotonPasadas() {
 
 function generarTabla() {
   const tabla = document.getElementById('tablaHorario');
+  if (!tabla) return;
   tabla.innerHTML = '';
 
   const inicio = new Date('2026-03-23T00:00:00');
-  const fin = new Date('2026-07-05T00:00:00');
+  const fin = new Date('2026-07-12T00:00:00'); 
 
   let lunesActual = obtenerLunesDeSemana(inicio);
   let numeroSemana = 1;
