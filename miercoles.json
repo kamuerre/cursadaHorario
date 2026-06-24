@@ -141,10 +141,9 @@
     {
       "materia": "Base de Datos",
       "hora": "18:30 a 21:00",
-      "modo": "Clase virtual",
-      "detalle": "Sin detalle por ahora",
-      "tipo": "base-datos",
-      "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
+      "modo": "Parcial Presencial y entrega del tp",
+      "detalle": "2° parcial de Base de datos",
+      "tipo": "parcial"
     }
   ],
   "2026-07-01": [
