@@ -19,20 +19,22 @@ function mergeEventos(...fuentes) {
 
 function formatearFechaISO(fecha) {
   const anio = fecha.getFullYear();
+  // Se fuerza el huso horario local para evitar corrimientos de día
   const mes = String(fecha.getMonth() + 1).padStart(2, '0');
   const dia = String(fecha.getDate()).padStart(2, '0');
   return `${anio}-${mes}-${dia}`;
 }
 
 function sumarDias(fecha, dias) {
-  const nueva = new Date(fecha);
+  const nueva = new Date(fecha.getTime());
   nueva.setDate(nueva.getDate() + dias);
   return nueva;
 }
 
 function obtenerLunesDeSemana(fecha) {
-  const copia = new Date(fecha);
+  const copia = new Date(fecha.getTime());
   const dia = copia.getDay();
+  // Si es 0 (Domingo) la diferencia es -6, si no es 1 - dia
   const diferencia = dia === 0 ? -6 : 1 - dia;
 
   copia.setDate(copia.getDate() + diferencia);
@@ -45,7 +47,7 @@ function obtenerEstadoFecha(fecha) {
   const hoy = new Date();
   hoy.setHours(0, 0, 0, 0);
 
-  const fechaComparar = new Date(fecha);
+  const fechaComparar = new Date(fecha.getTime());
   fechaComparar.setHours(0, 0, 0, 0);
 
   if (fechaComparar.getTime() === hoy.getTime()) {
@@ -63,11 +65,11 @@ function obtenerEstadoSemana(lunesSemana) {
   const hoy = new Date();
   hoy.setHours(0, 0, 0, 0);
 
-  const inicioSemana = new Date(lunesSemana);
+  const inicioSemana = new Date(lunesSemana.getTime());
   inicioSemana.setHours(0, 0, 0, 0);
 
   const finSemana = sumarDias(inicioSemana, 6);
-  finSemana.setHours(0, 0, 0, 0);
+  finSemana.setHours(23, 59, 59, 999);
 
   if (hoy >= inicioSemana && hoy <= finSemana) {
     return 'actual';
@@ -224,6 +226,7 @@ function configurarBotonPasadas() {
     return;
   }
 
+  boton.style.display = 'block';
   boton.textContent = 'Ver semanas pasadas';
 
   boton.onclick = function () {
@@ -242,8 +245,9 @@ function generarTabla() {
   if (!tabla) return;
   tabla.innerHTML = '';
 
-  const inicio = new Date('2026-03-23T00:00:00');
-  const fin = new Date('2026-07-12T00:00:00'); 
+  // Instanciar fechas de forma segura (Huso Local explicito reemplazando el separador)
+  const inicio = new Date('2026/03/23');
+  const fin = new Date('2026/07/12'); 
 
   let lunesActual = obtenerLunesDeSemana(inicio);
   let numeroSemana = 1;
@@ -298,13 +302,15 @@ async function cargarEventos() {
     console.error('Error al cargar los eventos:', error);
 
     const tabla = document.getElementById('tablaHorario');
-    tabla.innerHTML = `
-      <tr>
-        <td style="padding: 16px; text-align: left;">
-          No se pudieron cargar los archivos JSON.
-        </td>
-      </tr>
-    `;
+    if (tabla) {
+      tabla.innerHTML = `
+        <tr>
+          <td style="padding: 16px; text-align: left;">
+            No se pudieron cargar los archivos JSON o hay un error de sintaxis en ellos.
+          </td>
+        </tr>
+      `;
+    }
   }
 }
 
