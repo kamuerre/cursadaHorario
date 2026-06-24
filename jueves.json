@@ -142,5 +142,14 @@
       "detalle": "",
       "tipo": "fin"
     }
+  ],
+  "2026-07-09": [
+    {
+      "materia": "Inscripción a Finales",
+      "hora": "Todo el día",
+      "modo": "Trámite Virtual",
+      "detalle": "Período de inscripción para las mesas de exámenes finales.",
+      "tipo": "recuperatorio" 
+    }
   ]
 }
