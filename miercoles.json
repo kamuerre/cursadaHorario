@@ -8,7 +8,7 @@
       "tipo": "base-datos"
     }
   ],
-   "2026-03-30 21:00:00": [
+  "2026-03-30": [
     {
       "materia": "Base de Datos",
       "hora": "18:30 a 21:00",
@@ -141,8 +141,8 @@
     {
       "materia": "Base de Datos",
       "hora": "18:30 a 21:00",
-      "modo": "Parcial Presencial",
-      "detalle": "2° parcial de Base de datos y entregamdle tp",
+      "modo": "Parcial Presencial y entrega del tp",
+      "detalle": "2° parcial de Base de datos",
       "tipo": "parcial"
     }
   ],
