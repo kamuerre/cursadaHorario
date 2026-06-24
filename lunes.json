@@ -1,5 +1,5 @@
 {
-    "2026-03-23": [
+  "2026-03-23": [
     {
       "materia": "Base de Datos",
       "modo": "Feriado",
@@ -237,11 +237,11 @@
       "tipo": "tecnicas"
     }
   ],
-      "2026-07-06": [
+  "2026-07-06": [
     {
       "materia": "Inscripcion a finales",
       "hora": "8:00 a 22:00",
-      "tipo": "feriado
-    },
+      "tipo": "feriado"
+    }
   ]
 }
