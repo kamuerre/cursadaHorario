@@ -83,7 +83,7 @@
       "materia": "Base de Datos",
       "hora": "18:30 a 21:00",
       "modo": "Clase virtual",
-      "detalle": "Sin detalle por now",
+      "detalle": "Sin detalle por ahora",
       "tipo": "base-datos",
       "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
     }
@@ -164,5 +164,5 @@
       "detalle": "Período de inscripción para las mesas de exámenes finales.",
       "tipo": "recuperatorio"
     }
-   ]
+  ]
 }
