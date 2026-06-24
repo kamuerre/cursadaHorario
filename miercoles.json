@@ -155,5 +155,14 @@
       "tipo": "base-datos",
       "meet": "https://meet.google.com/khv-gzpr-fxg?hs=224"
     }
+  ],
+  "2026-07-08": [
+    {
+      "materia": "Inscripción a Finales",
+      "hora": "Todo el día",
+      "modo": "Trámite Virtual",
+      "detalle": "Período de inscripción para las mesas de exámenes finales.",
+      "tipo": "recuperatorio" 
+    }
   ]
 }
