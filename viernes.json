@@ -77,20 +77,20 @@
   "2026-05-22": [
     {
       "materia": "Técnicas de Programación",
-       "hora": "18:30 a 22:00",
-       "modo": "Clase virtual",
-       "detalle": "Diccionarios",
-       "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
-       "tipo": "tecnicas"
+      "hora": "18:30 a 22:00",
+      "modo": "Clase virtual",
+      "detalle": "Diccionarios",
+      "meet": "https://meet.google.com/zwa-jjrk-tmj?hs=224",
+      "tipo": "tecnicas"
     }
   ],
   "2026-05-29": [
     {
       "materia": "Técnicas de Programación",
-       "hora": "18:30 a 21:00",
-       "modo": "1° Parcial escrito individual – Clase presencial",
-       "detalle": "",
-       "tipo": "parcial"
+      "hora": "18:30 a 21:00",
+      "modo": "1° Parcial escrito individual – Clase presencial",
+      "detalle": "",
+      "tipo": "parcial"
     }
   ],
   "2026-06-05": [
